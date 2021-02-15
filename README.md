@@ -60,4 +60,35 @@ while merging (only) the same ESSIDs from different hash files
 examples:
 hcxessidtool --pmkid1=file1.16800 --pmkid2=file2.16800 --pmkidout12=joint.16800
 hcxessidtool --pmkid1=file1.16800 -l 10 --pmkidout=filtered.16800
-``
+```
+
+```
+C:\Users\User\Desktop\Wep Cracker>hcxeiutool -help
+hcxeiutool 1.0 (C) 2021 ZeroBeat
+usage:
+hcxeiutool <options>
+
+options:
+-i <file> : input wordlist
+-d <file> : output digit wordlist
+-x <file> : output xdigit wordlist
+-c <file> : output character wordlist (A-Za-z - other characters removed)
+-s <file> : output character wordlist (A-Za-z - other characters replaced by 0x0
+d)
+            recommended option for processing with rules
+-h        : show this help
+-v        : show version
+
+--help           : show this help
+--version        : show version
+
+example:
+$ hcxdumptool -i <interface> -o dump.pcapng --enable_status=31
+$ hcxpcapngtool -o test.22000 -E elist dump.pcapng
+$ hcxeiutool -i elist -d digitlist -x xdigitlist -c charlist -s sclist
+$ cat elist digitlist xdigitlist charlist sclist > wordlisttmp
+$ hashcat --stdout -r <rule> charlist >> wordlisttmp
+$ hashcat --stdout -r <rule> sclist >> wordlisttmp
+$ cat wordlisttmp | sort | uniq > wordlist
+$ hashcat -m 22000 dump.pcapng wordlist
+```
