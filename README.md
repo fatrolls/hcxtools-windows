@@ -5,6 +5,14 @@ Couldn't compile the other tools in the hxctools.. since I don't have openssl.. 
 
 Useless repo guys.. it doesn't work need to fix all the file writing / loading code for windows.. i won't do it, i gave up.
 
+Use hccap2cap.exe instead.
+
+```
+C:\Users\User>C:\Users\User\Desktop\hccap2cap.exe
+[-] Please specify the input .hccap file
+Usage: C:\Users\User\Desktop\hccap2cap.exe <in.hccap> <out.cap>
+```
+
 ```
 C:\Users\User\Desktop\Wep Cracker\>hcxhash2cap -help
 hcxhash2cap 1.0 (C) 2021 ZeroBeat
