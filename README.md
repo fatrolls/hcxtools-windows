@@ -1,7 +1,9 @@
 # hcxtools-windows
 WPA HCXTools windows
 
-Couldn't compile the other tools in the hxctools.. since I don't have openssl.. screw it, don't need those tools anyways. just need hcxhash2cap
+Couldn't compile the other tools in the hxctools.. since I don't have openssl.. screw it, don't need those tools anyways. just need hcxhash2cap.
+
+Useless repo guys.. it doesn't work need to fix all the file writing / loading code for windows.. i won't do it, i gave up.
 
 ```
 C:\Users\User\Desktop\Wep Cracker\>hcxhash2cap -help
